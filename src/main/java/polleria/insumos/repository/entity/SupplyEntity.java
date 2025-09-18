@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.With;
 
 @Entity
-@Table(name = "supply")
+@Table(name = "supplies")
 @NoArgsConstructor
 @AllArgsConstructor
 public class SupplyEntity {
@@ -21,13 +21,14 @@ public class SupplyEntity {
 	@With
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "supply_id")
 	private int supply_id;
 	
-	@Column(name = "sypply_name")
+	@Column(name = "supply_name")
 	private String supply_name;
 	
-	@Column(name = "sypply_stock")
-	private String supply_stock;
+	@Column(name = "supply_stock")
+	private int supply_stock;
 	
 	@Column(name = "expiration_date")
 	private Date expiration_date;
